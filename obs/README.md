@@ -1,0 +1,1 @@
+The current Lua countdown does not work anymore in recent OBS versions so I wrote this small workaround: a script writes into a file the countdown (and the current time) so you can use it as a text source in OBS. In this example, it starts with 1200 seconds (20 minutes).
