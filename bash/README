@@ -1,0 +1,3 @@
+# mysql_dump_single_table_s3.sh
+
+It dumps single MySQL tables, zips each of them and sends them to an AWS S3 bucket, then it removes the local dumps.
