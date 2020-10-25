@@ -1,0 +1,81 @@
+<html>
+<head>
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <script type='text/javascript'>
+/*
+Carlo Perassi - http://perassi.org/ - 2011
+based on:
+http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+http://code.google.com/apis/ajax/playground/?type=visualization#geo_chart
+http://code.google.com/intl/it-IT/apis/chart/interactive/docs/gallery/geochart.html
+*/
+    function drawRegionsMap() {
+        var data = new google.visualization.DataTable();
+        data.addRows(46);
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'Popularity');
+
+       data.setValue( 0, 0, 'AD'); // Andorra
+       data.setValue( 1, 0, 'AL'); // Albania
+       data.setValue( 2, 0, 'AT'); // Austria
+       data.setValue( 3, 0, 'BE'); // Belgium
+       data.setValue( 4, 0, 'BA'); // Bosnia and Herzegovina
+       data.setValue( 5, 0, 'BG'); // Bulgaria
+       data.setValue( 6, 0, 'CY'); // Cyprus
+       data.setValue( 7, 0, 'HR'); // Croatia
+       data.setValue( 8, 0, 'CZ'); // Czech Republic
+       data.setValue( 9, 0, 'DK'); // Denmark
+       data.setValue(10, 0, 'EG'); // Egypt
+       data.setValue(11, 0, 'EE'); // Estonia
+       data.setValue(12, 0, 'FI'); // Finland
+       data.setValue(13, 0, 'FR'); // France
+       data.setValue(14, 0, 'GE'); // Georgia
+       data.setValue(15, 0, 'DE'); // Germany
+       data.setValue(16, 0, 'GR'); // Greece
+       data.setValue(17, 0, 'HU'); // Hungary
+       data.setValue(18, 0, 'IS'); // Iceland
+       data.setValue(19, 0, 'IE'); // Ireland
+       data.setValue(20, 0, 'IT'); // Italy
+       data.setValue(21, 0, 'LV'); // Latvia
+       data.setValue(22, 0, 'LI'); // Liechtenstein
+       data.setValue(23, 0, 'LT'); // Lithuania
+       data.setValue(24, 0, 'LU'); // Luxembourg
+       data.setValue(25, 0, 'MK'); // Macedonia (the Republic of)
+       data.setValue(26, 0, 'MT'); // Malta
+       data.setValue(27, 0, 'MC'); // Monaco
+       data.setValue(28, 0, 'ME'); // Montenegro
+       data.setValue(29, 0, 'MA'); // Morocco
+       data.setValue(30, 0, 'NL'); // Netherlands
+       data.setValue(31, 0, 'NO'); // Norway
+       data.setValue(32, 0, 'PL'); // Poland
+       data.setValue(33, 0, 'PT'); // Portugal
+       data.setValue(34, 0, 'RO'); // Romania
+       data.setValue(35, 0, 'SM'); // San Marino
+       data.setValue(36, 0, 'RS'); // Serbia
+       data.setValue(37, 0, 'SK'); // Slovakia
+       data.setValue(38, 0, 'SI'); // Slovenia
+       data.setValue(39, 0, 'ES'); // Spain
+       data.setValue(40, 0, 'SE'); // Sweden
+       data.setValue(41, 0, 'CH'); // Switzerland
+       data.setValue(42, 0, 'TN'); // Tunisia
+       data.setValue(43, 0, 'TR'); // Turkey
+       data.setValue(44, 0, 'GB'); // United Kingdom
+       data.setValue(45, 0, 'VA'); // Vatican City
+
+        var options = {width: 6 * 556, height: 6 * 347};
+        var container = document.getElementById('map_canvas');
+        var geochart = new google.visualization.GeoChart(container);
+
+        geochart.draw(data, options);
+};
+
+    google.load('visualization', '1', {'packages': ['geochart']});
+    google.setOnLoadCallback(drawRegionsMap);
+  </script>
+</head>
+
+<body>
+  <div id='map_canvas'></div>
+</body>
+
+</html>
