@@ -1,0 +1,1 @@
+* ckcrypt.php: (2012) working examples to crypt and decrypt in PHP (note MCRYPT_RAND, use MASTERKEY or a string of yours)
