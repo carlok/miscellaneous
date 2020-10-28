@@ -1,1 +1,2 @@
 * ckcrypt.php: (2012) working examples to crypt and decrypt in PHP (note MCRYPT_RAND, use MASTERKEY or a string of yours)
+* commenters_yt.php: (2012) Simple snippet to get the YouTube pages of the commenters of a video
