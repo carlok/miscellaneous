@@ -3,9 +3,13 @@ from datetime import datetime
 
 
 def countdown(t): 
-    while t: 
-        mins, secs = divmod(t, 60) 
-        timer = '{:02d}:{:02d}'.format(mins, secs) 
+    while True:
+        if t >= 0:
+            mins, secs = divmod(t, 60)
+            timer = '{:02d}:{:02d}'.format(mins, secs)
+        else:
+            mins, secs = divmod(-t, 60)
+            timer = '-{:02d}:{:02d}'.format(mins, secs)
 
         now = datetime.now()
         current_time = now.strftime("%H:%M")
@@ -16,5 +20,5 @@ def countdown(t):
 
         time.sleep(1) 
         t -= 1
-      
-countdown(1200) 
+
+countdown(1800)
