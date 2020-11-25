@@ -19,6 +19,9 @@ Essential Policy (counting out EC2 creation):
         }
     ]
 }
+
+BTW: to decode encoded-message on CLI:
+aws sts decode-authorization-message --encoded-message xxx
 """
 
 ec2 = boto3.resource(
