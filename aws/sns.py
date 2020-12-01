@@ -5,7 +5,7 @@ sns = boto3.client('sns')
 
 numbers = ['+39...']
 
-# response = sns.set_sms_attributes(attributes={'DefaultSenderID': 'FixMe'})
+# extension note: https://blog.shikisoft.com/send-sms-with-sns-aws-lambda-python/
 
 for number in numbers:
     response = sns.publish(
