@@ -31,6 +31,10 @@ ec2 = boto3.resource(
     region_name='x'
 )
 
+user_data_script = '''#!/bin/bash
+	echo '{}' > /tmp/data.json
+'''.format('{"something": 1}')
+
 instances = ec2.create_instances(
     ImageId='ami-x',
     MinCount=1,
@@ -48,5 +52,6 @@ instances = ec2.create_instances(
           }
         ]
       },
-    ]
+    ],
+    UserData=user_data_script
 )
