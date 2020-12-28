@@ -24,6 +24,16 @@ BTW: to decode encoded-message on CLI:
 aws sts decode-authorization-message --encoded-message xxx
 """
 
+# ec2 destroy
+def ec2_destroy(region, instance_id):
+    ec2 = boto3.resource(
+        'ec2',
+        region_name=region
+    )
+
+    ec2.instances.filter(InstanceIds = [instance_id]).terminate()
+
+
 ec2 = boto3.resource(
     'ec2',
     aws_access_key_id='x',
