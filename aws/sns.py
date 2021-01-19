@@ -14,3 +14,11 @@ for number in numbers:
     )
     print(response)
 
+# for email
+msg_json = {"a": "b"}
+sns.publish(
+            TargetArn="...",
+            Subject=('...'),
+            Message=json.dumps({'default': json.dumps(msg_json, indent=4, sort_keys=True)}),
+            MessageStructure='json'
+        )
