@@ -1,0 +1,23 @@
+diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
+index b5b9040..99babe3 100644
+--- a/app/controllers/application_controller.rb
++++ b/app/controllers/application_controller.rb
+@@ -17,4 +17,8 @@ class ApplicationController < ActionController::API
+       render json: { errors: e.message }, status: :unauthorized
+     end
+   end
++
++  def routing_error(error = 'Routing error', status = :not_found, exception=nil)
++    render json: { error: 'ck wrong' }, status: :not_found
++  end
+ end
+diff --git a/config/routes.rb b/config/routes.rb
+index 2fcc96e..254c8f2 100644
+--- a/config/routes.rb
++++ b/config/routes.rb
+@@ -5,6 +5,8 @@ Rails.application.routes.draw do
+
+   mount ActionCable.server, at: '/cable'
+
++  match '*path', :to => 'application#routing_error', via: [:get, :post, :put, :delete, :patch]
++
