@@ -9,7 +9,7 @@ def countdown(t):
             timer = '{:02d}:{:02d}'.format(mins, secs)
         else:
             mins, secs = divmod(-t, 60)
-            timer = '-{:02d}:{:02d}'.format(mins, secs)
+            timer = '- {:02d}:{:02d}'.format(mins, secs)
 
         now = datetime.now()
         current_time = now.strftime("%H:%M")
