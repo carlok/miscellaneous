@@ -15,7 +15,7 @@ def mdec(f, level):
         except Exception as err:
             exception_type, exception_object, exception_traceback = sys.exc_info()
             filename = exception_traceback.tb_frame.f_code.co_filename
-            line_number = exception_traceback.tb_lineno
+            #line_number = exception_traceback.tb_lineno
             if level == 'warning':
                 print(f'I am a level {level}. Except string of {filename} => {f.__name__}() function => ' + str(err))
             elif level == 'error':
