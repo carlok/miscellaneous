@@ -15,7 +15,8 @@ def countdown(t):
         current_time = now.strftime("%H:%M")
 
         f = open("a.txt", "w")
-        f.write("{}\n  -\n{}".format(current_time, timer))
+        #f.write("{}\n  -\n{}".format(current_time, timer))
+        f.write(f"{current_time}\n")
         f.close()
 
         time.sleep(1) 

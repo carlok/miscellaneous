@@ -1,7 +1,7 @@
 import random
 
-arguments = ['-2', '-1', '-1/2', 0', '1/2', '1', '2']
-operations = ['+', '-', '·', ':', '^']
+arguments = ['-2', '-1', '-½', '0', '½', '1', '2']
+operations = ['+', '-', '·', ':']
 
 expressions = []
 
