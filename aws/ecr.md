@@ -1,9 +1,10 @@
 ```
-AWS_IMAGE_BASE_URL=xxxxxxxxxxxx.dkr.ecr.eu-central-1.amazonaws.com
+AWS_REGION=eu-central-1
+AWS_IMAGE_BASE_URL=xxxxxxxxxxxx.dkr.ecr.$AWS_REGION.amazonaws.com
 AWS_IMAGE_REPOSITORY=xxx_xxx_xxx
 AWS_IMAGE_VERSION=x.x
 AWS_PROFILE=XXX
-AWS_REGION=eu-central-1
+
 HOST_AWS_CREDENTIALS_FOLDER=$HOME/.aws
 LOCAL_REPOSITORY=xxx/xxx
 
